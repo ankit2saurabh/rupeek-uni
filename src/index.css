@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --uni-green: #00dcc8;
+  --uni-yellow: #fff061;
+  --uni-text-gradient-green: #8fffef;
+  --uni-text-gradient-yellow: #f9f490;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.gradient--text {
+  background-image: linear-gradient(
+    90deg,
+    var(--uni-text-gradient-green) 25%,
+    var(--uni-text-gradient-yellow)
+  );
+  background: linear-gradient(
+    90deg,
+    var(--uni-text-gradient-green) 25%,
+    var(--uni-text-gradient-yellow)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.footer-background {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 110%);
+}
+.spacer-gradient-border {
+  background: linear-gradient(
+    90deg,
+    rgb(0, 220, 200) 26.31%,
+    rgb(0, 220, 200) 61.59%,
+    rgb(255, 240, 97) 74.32%,
+    rgb(255, 240, 97) 85.31%
+  );
+  transform: matrix(1, 0, 0, -1, 0, 0);
 }
